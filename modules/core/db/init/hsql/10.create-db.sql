@@ -120,3 +120,59 @@ create table SAMPLE_CUSTOMER_DETAILS (
     primary key (ID)
 )^
 -- end SAMPLE_CUSTOMER_DETAILS
+-- begin SAMPLE_CLIENT
+create table SAMPLE_CLIENT (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    DTYPE varchar(31),
+    --
+    NAME varchar(255) not null,
+    EMAIL varchar(100),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_CLIENT
+-- begin SAMPLE_PERSON
+create table SAMPLE_PERSON (
+    ID varchar(36) not null,
+    --
+    FIRST_NAME varchar(100),
+    LAST_NAME varchar(100),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_PERSON
+-- begin SAMPLE_COMPANY
+create table SAMPLE_COMPANY (
+    ID varchar(36) not null,
+    --
+    INDUSTRY varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_COMPANY
+-- begin SAMPLE_ORDER
+create table SAMPLE_ORDER (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NUM varchar(20) not null,
+    DATE_ date not null,
+    AMOUNT decimal(19, 2),
+    CLIENT_ID varchar(36),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_ORDER

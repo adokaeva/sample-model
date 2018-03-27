@@ -47,4 +47,16 @@
             template="com/company/sample/web/customer/customer-address-browse.xml"/>
     <screen id="sample$CustomerDetails.edit"
             template="com/company/sample/web/customerdetails/customer-details-edit.xml"/>
+    <screen id="sample$Company.browse"
+            template="com/company/sample/web/company/company-browse.xml"/>
+    <screen id="sample$Company.edit"
+            template="com/company/sample/web/company/company-edit.xml"/>
+    <screen id="sample$Person.browse"
+            template="com/company/sample/web/person/person-browse.xml"/>
+    <screen id="sample$Person.edit"
+            template="com/company/sample/web/person/person-edit.xml"/>
+    <screen id="sample$Order.browse"
+            template="com/company/sample/web/order/order-browse.xml"/>
+    <screen id="sample$Order.edit"
+            template="com/company/sample/web/order/order-edit.xml"/>
 </screen-config>

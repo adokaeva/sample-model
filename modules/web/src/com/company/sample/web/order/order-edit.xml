@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.order.OrderEdit"
+        datasource="orderDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.sample.web.order">
+    <dsContext>
+        <datasource id="orderDs"
+                    class="com.company.sample.entity.order.Order"
+                    view="order-view"/>
+        <collectionDatasource id="companiesDs"
+                              class="com.company.sample.entity.clients.Company"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from sample$Company e]]>
+            </query>
+        </collectionDatasource>
+        <collectionDatasource id="peopleDs"
+                              class="com.company.sample.entity.clients.Person"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from sample$Person e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="windowActions"
+            spacing="true">
+        <hbox spacing="true">
+            <fieldGroup id="fieldGroup"
+                        border="visible"
+                        caption="Details"
+                        datasource="orderDs">
+                <column width="250px">
+                    <field property="num"/>
+                    <field property="date"/>
+                    <field property="amount"/>
+                </column>
+            </fieldGroup>
+            <groupBox caption="Client"
+                      spacing="true"
+                      width="300px">
+                <optionsGroup id="clientTypeField"
+                              orientation="horizontal"/>
+                <lookupPickerField id="clientField"
+                                   datasource="orderDs"
+                                   property="client"
+                                   width="100%"/>
+            </groupBox>
+        </hbox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

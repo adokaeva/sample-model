@@ -14,5 +14,8 @@
             <item screen="sample$Airport.browse3"/>
             <item screen="sample$Customer.browse2"/>
         </menu>
+        <menu id="entity-inheritance">
+            <item screen="sample$Order.browse"/>
+        </menu>
     </menu>
 </menu-config>

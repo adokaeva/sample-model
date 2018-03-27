@@ -1,7 +1,3 @@
-/*
- * TODO Copyright
- */
-
 package com.company.sample.entity.airports;
 
 import javax.persistence.Entity;

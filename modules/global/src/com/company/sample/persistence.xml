@@ -10,5 +10,9 @@
         <class>com.company.sample.entity.customers.Customer</class>
         <class>com.company.sample.entity.customers.CustomerAddress</class>
         <class>com.company.sample.entity.customers.CustomerDetails</class>
+        <class>com.company.sample.entity.clients.Client</class>
+        <class>com.company.sample.entity.clients.Person</class>
+        <class>com.company.sample.entity.clients.Company</class>
+        <class>com.company.sample.entity.order.Order</class>
     </persistence-unit>
 </persistence>

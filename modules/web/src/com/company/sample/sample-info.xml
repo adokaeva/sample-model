@@ -136,4 +136,54 @@
         <controller/>
     </screen>
 
+    <screen id="sample$Company.browse">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
+    <screen id="sample$Company.edit">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
+    <screen id="sample$Person.browse">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
+    <screen id="sample$Person.edit">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
+    <screen id="sample$Order.browse">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/order/Order.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
+    <screen id="sample$Order.edit">
+        <doc caption="Recipe: Entity Inheritance" page="entity_inheritance.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/order/Order.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Client.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Company.java"/>
+        <file path="modules/global/src/com/company/sample/entity/clients/Person.java"/>
+        <descriptor/>
+        <controller/>
+    </screen>
 </sample-info>

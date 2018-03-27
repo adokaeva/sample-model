@@ -50,4 +50,10 @@
         <property name="customer"
                   view="_minimal"/>
     </view>
+    <view class="com.company.sample.entity.order.Order"
+          extends="_local"
+          name="order-view">
+        <property name="client"
+                  view="_minimal"/>
+    </view>
 </views>
