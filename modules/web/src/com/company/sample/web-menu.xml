@@ -8,11 +8,14 @@
             <item screen="sample$Customer.browse1"/>
         </menu>
         <menu id="airports">
-            <item screen="sample$Airport.browse"/>
             <item screen="sample$Airport.browse1"/>
             <item screen="sample$Airport.browse2"/>
             <item screen="sample$Airport.browse3"/>
             <item screen="sample$Customer.browse2"/>
+        </menu>
+        <menu id="airports-mtm">
+            <item screen="sample$Airline.browse"/>
+            <item screen="sample$DutyFree.browse"/>
         </menu>
         <menu id="entity-inheritance">
             <item screen="sample$Order.browse"/>

@@ -88,6 +88,30 @@
         <descriptor/>
     </screen>
 
+    <screen id="sample$Airline.browse">
+        <doc caption="Recipe: Many-to-Many Association" page="association_mtm_recipe.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airline.java"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airport.java"/>
+    </screen>
+    <screen id="sample$Airline.edit">
+        <doc caption="Recipe: Many-to-Many Association" page="association_mtm_recipe.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airline.java"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airport.java"/>
+    </screen>
+
+    <screen id="sample$DutyFree.browse">
+        <doc caption="Recipe: Many-to-Many Association" page="association_mtm_recipe.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/DutyFree.java"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airport.java"/>
+    </screen>
+    <screen id="sample$DutyFree.edit">
+        <doc caption="Recipe: Many-to-Many Association" page="association_mtm_recipe.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/DutyFree.java"/>
+        <file path="modules/global/src/com/company/sample/entity/airports/Airport.java"/>
+        <file path="modules/web/src/com/company/sample/web/dutyfree/duty-free-edit.xml"/>
+        <file path="modules/web/src/com/company/sample/web/dutyfree/DutyFreeEdit.java"/>
+    </screen>
+
     <screen id="sample$Customer.browse2">
         <doc caption="Recipe: One-to-One Composition" page="composition_oto_recipe.html" style="highlight"/>
         <file path="modules/global/src/com/company/sample/entity/customers/Customer.java"/>

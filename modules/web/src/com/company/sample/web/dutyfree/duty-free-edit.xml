@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.dutyfree.DutyFreeEdit"
+        datasource="dutyFreeDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.sample.web.dutyfree">
+    <dsContext>
+        <datasource id="dutyFreeDs"
+                    class="com.company.sample.entity.airports.DutyFree"
+                    view="dutyFree-airport">
+            <collectionDatasource id="airportsDs"
+                                  property="airports"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="dutyFreeDs">
+            <column width="250px">
+                <field property="name"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="airportsBox"
+                  caption="msg://com.company.sample.entity.airports/DutyFree.airports">
+            <table id="airportsTable"
+                   height="200px"
+                   width="100%"
+                   editable="true">
+                <actions>
+                    <action id="addAirport" invoke="addAirport"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="airport"/>
+                    <column id="currency" editable="true"/>
+                </columns>
+                <rows datasource="airportsDs"/>
+                <buttonsPanel>
+                    <button action="airportsTable.addAirport" caption="Add airport"/>
+                    <button action="airportsTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

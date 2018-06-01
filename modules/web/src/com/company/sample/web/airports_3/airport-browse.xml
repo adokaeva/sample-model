@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd" caption="msg://browseCaption"
-        class="com.company.sample.web.airports_3.airport.AirportBrowse" focusComponent="airportsTable"
-        lookupComponent="airportsTable" messagesPack="com.company.sample.web.airports_3.airport">
+        class="com.company.sample.web.airports_3.AirportBrowse" focusComponent="airportsTable"
+        lookupComponent="airportsTable" messagesPack="com.company.sample.web.airports_3">
     <dsContext>
         <collectionDatasource id="airportsDs" class="com.company.sample.entity.airports.Airport" view="_local">
             <query>

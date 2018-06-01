@@ -14,5 +14,8 @@
         <class>com.company.sample.entity.clients.Person</class>
         <class>com.company.sample.entity.clients.Company</class>
         <class>com.company.sample.entity.order.Order</class>
+        <class>com.company.sample.entity.airports.Airline</class>
+        <class>com.company.sample.entity.airports.DutyFree</class>
+        <class>com.company.sample.entity.airports.AirportDutyFree</class>
     </persistence-unit>
 </persistence>

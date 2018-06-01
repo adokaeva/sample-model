@@ -5,10 +5,12 @@
           name="airport-terminals">
         <property name="terminals"
                   view="_local"/>
+        <property name="airlines"
+                  view="_minimal"/>
     </view>
     <view class="com.company.sample.entity.airports.Airport"
           extends="_local"
-          name="airport-terminals-meetingPoints-view">
+          name="airport-terminals-meetingPoints">
         <property name="terminals"
                   view="terminal-meetingPoints-view"/>
     </view>
@@ -54,6 +56,38 @@
           extends="_local"
           name="order-view">
         <property name="client"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.sample.entity.airports.Airline"
+          extends="_local"
+          name="airline-airports">
+        <property name="airports"
+                  view="_local"/>
+    </view>
+    <view class="com.company.sample.entity.airports.Airport"
+          extends="_local"
+          name="airport-duty-free">
+        <property name="dutyFreeShops"
+                  view="_minimal">
+            <property name="dutyFree"
+                      view="_minimal"/>
+            <property name="currency"/>
+        </property>
+    </view>
+    <view class="com.company.sample.entity.airports.DutyFree"
+          extends="_local"
+          name="dutyFree-airport">
+        <property name="airports"
+                  view="_minimal">
+            <property name="airport"
+                      view="_minimal"/>
+            <property name="currency"/>
+        </property>
+    </view>
+    <view class="com.company.sample.entity.airports.Airport"
+          extends="_local"
+          name="airport-airlines">
+        <property name="airlines"
                   view="_minimal"/>
     </view>
 </views>

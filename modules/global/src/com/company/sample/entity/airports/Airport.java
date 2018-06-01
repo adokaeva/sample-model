@@ -1,16 +1,15 @@
 package com.company.sample.entity.airports;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.Composition;
+import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.OnDelete;
 import com.haulmont.cuba.core.global.DeletePolicy;
-import java.util.List;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderBy;
 
+import javax.persistence.*;
+import java.util.List;
+
+@NamePattern("%s|name")
 @Table(name = "SAMPLE_AIRPORT")
 @Entity(name = "sample$Airport")
 public class Airport extends StandardEntity {
@@ -24,6 +23,35 @@ public class Airport extends StandardEntity {
     @OneToMany(mappedBy = "airport")
     @OrderBy("name")
     protected List<Terminal> terminals;
+
+    @JoinTable(name = "SAMPLE_AIRLINE_AIRPORT_LINK",
+        joinColumns = @JoinColumn(name = "AIRPORT_ID"),
+        inverseJoinColumns = @JoinColumn(name = "AIRLINE_ID"))
+    @ManyToMany
+    protected List<Airline> airlines;
+
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "airport")
+    protected List<AirportDutyFree> dutyFreeShops;
+
+    public void setDutyFreeShops(List<AirportDutyFree> dutyFreeShops) {
+        this.dutyFreeShops = dutyFreeShops;
+    }
+
+    public List<AirportDutyFree> getDutyFreeShops() {
+        return dutyFreeShops;
+    }
+
+
+    public void setAirlines(List<Airline> airlines) {
+        this.airlines = airlines;
+    }
+
+    public List<Airline> getAirlines() {
+        return airlines;
+    }
+
 
     public void setTerminals(List<Terminal> terminals) {
         this.terminals = terminals;

@@ -19,8 +19,6 @@ values ('38a41187-fb98-f2cf-34b1-c9156efd4d1a', 1, current_timestamp, 'b55eecf2-
 insert into SAMPLE_TERMINAL (ID, VERSION, CREATE_TS, AIRPORT_ID, NAME)
 values ('3b773d44-3eff-6723-fe31-7386d6461394', 1, current_timestamp, '6f2e2f9e-9f19-df38-0aac-122e2b6ba466', 'Terminal 4');
 
---
-
 insert into SAMPLE_AIRPORT (ID, VERSION, CREATE_TS, NAME)
 values ('eade7c5a-233e-02df-0ab0-d2a2cf0b9a19', 1, current_timestamp, 'Sheremetyevo');
 
@@ -45,6 +43,35 @@ values ('835dfd1a-64a5-d382-4e37-f438b0f48a30', 1, current_timestamp, '4b1ac788-
 insert into SAMPLE_TERMINAL (ID, VERSION, CREATE_TS, AIRPORT_ID, NAME)
 values ('4b34ade5-d10d-38fa-c56a-6e42a354acca', 1, current_timestamp, 'eade7c5a-233e-02df-0ab0-d2a2cf0b9a19', 'Terminal E');
 
+insert into SAMPLE_AIRLINE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME)
+values ('965ed633-8137-e77f-639a-7bae440c2565', 1, '2018-06-01 16:48:03', 'user', '2018-06-01 16:48:03', null, null, null, 'Lufthansa');
+
+insert into SAMPLE_AIRLINE_AIRPORT_LINK (AIRLINE_ID, AIRPORT_ID)
+values ('965ed633-8137-e77f-639a-7bae440c2565', 'eade7c5a-233e-02df-0ab0-d2a2cf0b9a19');
+
+insert into SAMPLE_AIRLINE_AIRPORT_LINK (AIRLINE_ID, AIRPORT_ID)
+values ('965ed633-8137-e77f-639a-7bae440c2565', '6f2e2f9e-9f19-df38-0aac-122e2b6ba466');
+
+insert into SAMPLE_AIRLINE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME)
+values ('65bf43ad-aceb-36e7-f198-b490646d2cce', 1, '2018-06-01 16:48:12', 'user', '2018-06-01 16:48:12', null, null, null, 'Emirates');
+
+insert into SAMPLE_AIRLINE_AIRPORT_LINK (AIRLINE_ID, AIRPORT_ID)
+values ('65bf43ad-aceb-36e7-f198-b490646d2cce', 'eade7c5a-233e-02df-0ab0-d2a2cf0b9a19');
+
+insert into SAMPLE_DUTY_FREE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME)
+values ('2029f439-c97d-ec40-8122-20010c97042d', 1, '2018-06-01 16:50:24', 'user', '2018-06-01 16:50:24', null, null, null, 'Heinemann');
+
+insert into SAMPLE_AIRPORT_DUTY_FREE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, AIRPORT_ID, DUTY_FREE_ID, CURRENCY)
+values ('72bdd5f3-1478-b1d0-f3ab-608731357a7d', 1, '2018-06-01 16:51:20', 'user', '2018-06-01 16:51:20', null, null, null, '6f2e2f9e-9f19-df38-0aac-122e2b6ba466', '2029f439-c97d-ec40-8122-20010c97042d', 50);
+
+insert into SAMPLE_DUTY_FREE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME)
+values ('60c084d7-6479-6835-63a3-fb4ce36209a5', 1, '2018-06-01 16:50:57', 'user', '2018-06-01 16:50:57', null, null, null, 'James Richardson');
+
+insert into SAMPLE_AIRPORT_DUTY_FREE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, AIRPORT_ID, DUTY_FREE_ID, CURRENCY)
+values ('d34ded54-9eca-f7b9-ee8d-5df66ac27dfb', 1, '2018-06-01 16:51:59', 'user', '2018-06-01 16:51:59', null, null, null, 'eade7c5a-233e-02df-0ab0-d2a2cf0b9a19', '60c084d7-6479-6835-63a3-fb4ce36209a5', 40);
+
+insert into SAMPLE_AIRPORT_DUTY_FREE (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, AIRPORT_ID, DUTY_FREE_ID, CURRENCY)
+values ('a44b2b68-a0a3-5ede-6ee8-da7d91238d33', 1, '2018-06-01 16:51:59', 'user', '2018-06-01 16:51:59', null, null, null, '6f2e2f9e-9f19-df38-0aac-122e2b6ba466', '60c084d7-6479-6835-63a3-fb4ce36209a5', 50);
 
 insert into SAMPLE_CUSTOMER_DETAILS (ID, VERSION, CREATE_TS, INFO)
 values ('0d3787bd-7f18-46d2-a1fc-b09cae63fe75', 1, current_timestamp, 'Some details');

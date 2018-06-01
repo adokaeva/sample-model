@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.8.6'
+    ext.cubaVersion = '6.9.0'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
@@ -19,11 +19,11 @@ buildscript {
 
 def globalModule = project(':model-global')
 def coreModule = project(':model-core')
-def guiModule = project(':model-gui')
+
 def webModule = project(':model-web')
 def webThemesModule = project(':model-web-themes')
 
-def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
+def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 
 apply(plugin: 'idea')
@@ -50,7 +50,7 @@ dependencies {
 
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
 
-configure([globalModule, coreModule, guiModule, webModule]) {
+configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
     apply(plugin: 'idea')
@@ -129,18 +129,6 @@ configure(coreModule) {
     }
 }
 
-configure(guiModule) {
-    dependencies {
-        compile(globalModule)
-
-    }
-
-    task deployConf(type: Copy) {
-        from file('src')
-        include "com/company/sample/**"
-        into "$cuba.tomcat.dir/conf/model"
-    }
-}
 
 configure(webModule) {
     configurations {
@@ -149,7 +137,7 @@ configure(webModule) {
 
     dependencies {
         provided(servletApi)
-        compile(guiModule)
+        compile(globalModule)
 
     }
     
@@ -187,7 +175,7 @@ configure(webModule) {
 
     task deploy(dependsOn: [assemble, cleanConf], type: CubaDeployment) {
         appName = 'model'
-        appJars('model-global', 'model-gui', 'model-web')
+        appJars('model-global', 'model-web')
     }
     task buildScssThemes(type: CubaWebScssThemeCreation)
     task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)

@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        caption="msg://editCaption"
-        class="com.company.sample.web.airports_1.airport.AirportEdit"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.airports_4.AirportEdit"
         datasource="airportDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.sample.web.airports_1.airport">
+        messagesPack="com.company.sample.web.airports_4">
     <dsContext>
         <datasource id="airportDs"
                     class="com.company.sample.entity.airports.Airport"
-                    view="airport-terminals-meetingPoints">
-            <collectionDatasource id="terminalsDs"
-                                  property="terminals">
-                <collectionDatasource id="meetingPointsDs"
-                                      property="meetingPoints"/>
-            </collectionDatasource>
+                    view="airport-airlines">
+            <collectionDatasource id="airlinesDs"
+                                  property="airlines"/>
         </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="terminalsBox"
+    <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
                     datasource="airportDs">
@@ -26,24 +23,22 @@
                 <field property="name"/>
             </column>
         </fieldGroup>
-        <groupBox id="terminalsBox"
-                  caption="msg://com.company.sample.entity.airports/Airport.terminals"
-                  expand="terminalsTable">
-            <table id="terminalsTable"
+        <groupBox id="airlinesBox"
+                  caption="msg://com.company.sample.entity.airports/Airport.airlines">
+            <table id="airlinesTable"
+                   height="200px"
                    width="100%">
                 <actions>
-                    <action id="create"/>
-                    <action id="edit"/>
+                    <action id="add"/>
                     <action id="remove"/>
                 </actions>
                 <columns>
                     <column id="name"/>
                 </columns>
-                <rows datasource="terminalsDs"/>
+                <rows datasource="airlinesDs"/>
                 <buttonsPanel>
-                    <button action="terminalsTable.create"/>
-                    <button action="terminalsTable.edit"/>
-                    <button action="terminalsTable.remove"/>
+                    <button action="airlinesTable.add"/>
+                    <button action="airlinesTable.remove"/>
                 </buttonsPanel>
             </table>
         </groupBox>

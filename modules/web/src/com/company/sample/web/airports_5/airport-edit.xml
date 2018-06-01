@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        caption="msg://editCaption"
-        class="com.company.sample.web.airports_1.airport.AirportEdit"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.airports_5.AirportEdit"
         datasource="airportDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.sample.web.airports_1.airport">
+        messagesPack="com.company.sample.web.airports_5">
     <dsContext>
         <datasource id="airportDs"
                     class="com.company.sample.entity.airports.Airport"
-                    view="airport-terminals-meetingPoints">
-            <collectionDatasource id="terminalsDs"
-                                  property="terminals">
-                <collectionDatasource id="meetingPointsDs"
-                                      property="meetingPoints"/>
-            </collectionDatasource>
+                    view="airport-duty-free">
+            <collectionDatasource id="dutyFreeShopsDs"
+                                  property="dutyFreeShops"/>
         </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="terminalsBox"
+    <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
                     datasource="airportDs">
@@ -26,10 +23,10 @@
                 <field property="name"/>
             </column>
         </fieldGroup>
-        <groupBox id="terminalsBox"
-                  caption="msg://com.company.sample.entity.airports/Airport.terminals"
-                  expand="terminalsTable">
-            <table id="terminalsTable"
+        <groupBox id="dutyFreeShopsBox"
+                  caption="msg://com.company.sample.entity.airports/Airport.dutyFreeShops">
+            <table id="dutyFreeShopsTable"
+                   height="200px"
                    width="100%">
                 <actions>
                     <action id="create"/>
@@ -37,13 +34,14 @@
                     <action id="remove"/>
                 </actions>
                 <columns>
-                    <column id="name"/>
+                    <column id="dutyFree"/>
+                    <column id="currency"/>
                 </columns>
-                <rows datasource="terminalsDs"/>
+                <rows datasource="dutyFreeShopsDs"/>
                 <buttonsPanel>
-                    <button action="terminalsTable.create"/>
-                    <button action="terminalsTable.edit"/>
-                    <button action="terminalsTable.remove"/>
+                    <button action="dutyFreeShopsTable.create"/>
+                    <button action="dutyFreeShopsTable.edit"/>
+                    <button action="dutyFreeShopsTable.remove"/>
                 </buttonsPanel>
             </table>
         </groupBox>

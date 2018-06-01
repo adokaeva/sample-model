@@ -1,7 +1,6 @@
-package com.company.sample.web.airports_3.airport;
+package com.company.sample.web.airports_3;
 
 import com.haulmont.bali.util.ParamsMap;
-import com.haulmont.cuba.core.global.PersistenceHelper;
 import com.haulmont.cuba.gui.components.AbstractLookup;
 import com.haulmont.cuba.gui.components.actions.CreateAction;
 import com.haulmont.cuba.gui.components.actions.EditAction;
