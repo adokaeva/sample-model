@@ -62,11 +62,11 @@
           extends="_local"
           name="airline-airports">
         <property name="airports"
-                  view="_local"/>
+                  view="_minimal"/>
     </view>
     <view class="com.company.sample.entity.airports.Airport"
           extends="_local"
-          name="airport-duty-free">
+          name="airport-dutyFree">
         <property name="dutyFreeShops"
                   view="_minimal">
             <property name="dutyFree"

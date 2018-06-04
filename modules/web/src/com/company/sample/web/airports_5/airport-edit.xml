@@ -8,7 +8,7 @@
     <dsContext>
         <datasource id="airportDs"
                     class="com.company.sample.entity.airports.Airport"
-                    view="airport-duty-free">
+                    view="airport-dutyFree">
             <collectionDatasource id="dutyFreeShopsDs"
                                   property="dutyFreeShops"/>
         </datasource>
