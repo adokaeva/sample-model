@@ -64,8 +64,8 @@
             template="com/company/sample/web/dutyfree/duty-free-browse.xml"/>
     <screen id="sample$DutyFree.edit"
             template="com/company/sample/web/dutyfree/duty-free-edit.xml"/>
-    <screen id="sample$Airport.browse"
-            template="com/company/sample/web/airports_5/airport-browse.xml"/>
     <screen id="sample$Airport.edit"
             template="com/company/sample/web/airports_5/airport-edit.xml"/>
+    <screen id="sample$Airport.browse"
+            template="com/company/sample/web/airports_5/airport-browse.xml"/>
 </screen-config>

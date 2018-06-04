@@ -8,7 +8,7 @@
     <dsContext>
         <groupDatasource id="airportsDs"
                          class="com.company.sample.entity.airports.Airport"
-                         view="_local">
+                         view="_minimal">
             <query>
                 <![CDATA[select e from sample$Airport e]]>
             </query>

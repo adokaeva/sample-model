@@ -8,7 +8,7 @@
     <dsContext>
         <datasource id="airportDs"
                     class="com.company.sample.entity.airports.Airport"
-                    view="airport-dutyFree">
+                    view="_minimal">
             <collectionDatasource id="dutyFreeShopsDs"
                                   property="dutyFreeShops"/>
         </datasource>
@@ -23,28 +23,6 @@
                 <field property="name"/>
             </column>
         </fieldGroup>
-        <groupBox id="dutyFreeShopsBox"
-                  caption="msg://com.company.sample.entity.airports/Airport.dutyFreeShops">
-            <table id="dutyFreeShopsTable"
-                   height="200px"
-                   width="100%">
-                <actions>
-                    <action id="create"/>
-                    <action id="edit"/>
-                    <action id="remove"/>
-                </actions>
-                <columns>
-                    <column id="dutyFree"/>
-                    <column id="currency"/>
-                </columns>
-                <rows datasource="dutyFreeShopsDs"/>
-                <buttonsPanel>
-                    <button action="dutyFreeShopsTable.create"/>
-                    <button action="dutyFreeShopsTable.edit"/>
-                    <button action="dutyFreeShopsTable.remove"/>
-                </buttonsPanel>
-            </table>
-        </groupBox>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>
