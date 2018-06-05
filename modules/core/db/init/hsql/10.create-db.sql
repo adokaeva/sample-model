@@ -176,3 +176,61 @@ create table SAMPLE_ORDER (
     primary key (ID)
 )^
 -- end SAMPLE_ORDER
+-- begin SAMPLE_AIRLINE
+create table SAMPLE_AIRLINE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NAME varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_AIRLINE
+
+-- begin SAMPLE_AIRLINE_AIRPORT_LINK
+create table SAMPLE_AIRLINE_AIRPORT_LINK (
+    AIRLINE_ID varchar(36) not null,
+    AIRPORT_ID varchar(36) not null,
+    primary key (AIRLINE_ID, AIRPORT_ID)
+)^
+-- end SAMPLE_AIRLINE_AIRPORT_LINK
+-- begin SAMPLE_DUTY_FREE
+create table SAMPLE_DUTY_FREE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NAME varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_DUTY_FREE
+-- begin SAMPLE_AIRPORT_DUTY_FREE
+create table SAMPLE_AIRPORT_DUTY_FREE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    AIRPORT_ID varchar(36),
+    DUTY_FREE_ID varchar(36),
+    CURRENCY integer,
+    --
+    primary key (ID)
+)^
+-- end SAMPLE_AIRPORT_DUTY_FREE

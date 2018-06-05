@@ -1,7 +1,6 @@
 package com.company.sample.entity.clients;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
 

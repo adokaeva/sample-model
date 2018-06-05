@@ -12,7 +12,7 @@
     <layout expand="meetingPointsBox" spacing="true">
         <fieldGroup id="fieldGroup" datasource="terminalDs">
             <column width="250px">
-                <field id="name"/>
+                <field property="name"/>
             </column>
         </fieldGroup>
         <groupBox id="meetingPointsBox" caption="msg://com.company.sample.entity.airports/Terminal.meetingPoints"
