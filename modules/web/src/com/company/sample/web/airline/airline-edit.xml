@@ -29,7 +29,8 @@
                    height="200px"
                    width="100%">
                 <actions>
-                    <action id="add" openType="DIALOG"/>
+                    <action id="add"/>
+                    <action id="create"/>
                     <action id="remove"/>
                 </actions>
                 <columns>
@@ -38,6 +39,7 @@
                 <rows datasource="airportsDs"/>
                 <buttonsPanel>
                     <button action="airportsTable.add"/>
+                    <button action="airportsTable.create"/>
                     <button action="airportsTable.remove"/>
                 </buttonsPanel>
             </table>
