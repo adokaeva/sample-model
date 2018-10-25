@@ -12,7 +12,8 @@
             <collectionDatasource id="terminalsDs"
                                   property="terminals">
                 <collectionDatasource id="meetingPointsDs"
-                                      property="meetingPoints"/>
+                                      property="meetingPoints"
+                                      allowCommit="false"/>
             </collectionDatasource>
         </datasource>
     </dsContext>
